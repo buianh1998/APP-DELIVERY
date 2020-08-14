@@ -5,7 +5,6 @@ import {
   IsNumber,
   Length,
 } from "class-validator";
-import { randomString } from "./../utils/codeActive";
 export class UserForm {
   @IsString()
   @IsNotEmpty()
@@ -39,4 +38,15 @@ export class UserForm {
   @IsNotEmpty()
   @Length(3, 30)
   address: string;
+}
+export class loginFormUser {
+  @IsString()
+  @IsNotEmpty()
+  @Length(3, 30)
+  username: string;
+
+  @IsString()
+  @IsNotEmpty()
+  @Length(3, 30)
+  password: string;
 }
